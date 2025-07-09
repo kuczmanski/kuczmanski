@@ -36,7 +36,7 @@
 - Java 8/17 (POO, boas práticas)
 - HTML5, CSS3, XML, JSON, SQL
 - Programação Orientada a Objetos (POO)
-- Experiência pontual com C#, Python, JavaScript, React, Flutter, VBScript, BAT (.bat)
+- Experiência pontual com C#, Python, JavaScript, React
 
 ### ⚙️ Desenvolvimento & Automação
 - Criação de executáveis e instaladores (.exe) com Inno Setup, Launch4j, jpackage
@@ -46,7 +46,7 @@
 - Spring Boot, Spring Security, Spring Data JPA
 - Hibernate, Jakarta EE, VRaptor
 - JSP, Thymeleaf, API RESTful
-- Bootstrap (frontend básico)
+- Bootstrap
 
 ### 🛢️ Bancos de Dados
 - PostgreSQL, MySQL, SQLite
