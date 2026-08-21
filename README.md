@@ -1,3 +1,5 @@
+Tecnologias utilizadas nos projetos pessoais.
+
 Java 17 · Java 21 · Spring Boot · Spring Web · Spring Security · Spring Data JPA · Spring Mail · Spring Validation · Spring Actuator · Spring OAuth2 Client · Spring DevTools · Thymeleaf · Thymeleaf Layout Dialect · Hibernate · Hibernate Envers · Hibernate Validator · Flyway · JWT · jjwt · OAuth2 · Lombok · Maven · JUnit · Spring Boot Test · JavaFX · JavaFX FXML · Java-WebSocket · Gson · Jackson · JAXB · Apache HttpClient · Apache Commons Lang · Apache POI · Apache PDFBox · Micrometer · Prometheus · TLS · H2 · MySQL Connector/J
 
 MySQL · SQLite
