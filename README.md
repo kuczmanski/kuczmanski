@@ -1,4 +1,4 @@
-Tecnologias utilizadas nos projetos pessoais.
+Tecnologias utilizadas nos projetos privados.
 
 Java 17 · Java 21 · Spring Boot · Spring Web · Spring Security · Spring Data JPA · Spring Mail · Spring Validation · Spring Actuator · Spring OAuth2 Client · Thymeleaf · Hibernate · Hibernate Envers · Flyway · JWT · OAuth2 · Lombok · Maven · JUnit · JavaFX · WebSocket · TLS · Gson · Apache POI · Apache PDFBox · H2
 
