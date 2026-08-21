@@ -1,0 +1,87 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Engine visualization">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a101a"/>
+      <stop offset="100%" stop-color="#0d1524"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3de7c9" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3de7c9"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <style>
+      <![CDATA[
+        .n1, .n2, .n3 { transform-box: fill-box; transform-origin: center; }
+        .n1 { animation: pulse 2.4s ease-in-out infinite; }
+        .n2 { animation: pulse 2.4s ease-in-out .4s infinite; }
+        .n3 { animation: pulse 2.4s ease-in-out .8s infinite; }
+        .flow { stroke-dasharray: 6 10; animation: flow 1.8s linear infinite; }
+        .flow2 { stroke-dasharray: 6 10; animation: flow 2.2s linear infinite reverse; }
+        .card { animation: rise .9s ease both; }
+        .card2 { animation: rise .9s ease .12s both; }
+        .card3 { animation: rise .9s ease .24s both; }
+        .wave { animation: wave 3.2s ease-in-out infinite; }
+        .spin { transform-origin: 934px 190px; animation: spin 4s linear infinite; }
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); opacity: .55; }
+          50% { transform: scale(1.35); opacity: 1; }
+        }
+        @keyframes flow { to { stroke-dashoffset: -64; } }
+        @keyframes rise {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes wave {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-6px); }
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="1200" height="280" rx="24" fill="url(#panel)" stroke="#1d2a3f"/>
+  <rect x="1" y="1" width="1198" height="278" rx="24" fill="none" stroke="url(#line)" stroke-opacity=".55"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <g class="card">
+      <rect x="36" y="36" width="340" height="208" rx="18" fill="#0b1422" stroke="#23324a"/>
+      <text x="60" y="74" fill="#7de8d2" font-size="12" letter-spacing="3">MODULE 01</text>
+      <text x="60" y="112" fill="#e8f2ff" font-size="26" font-weight="700">signal graph</text>
+      <text x="60" y="144" fill="#8ea0b8" font-size="14">nodes, edges, motion</text>
+      <g class="wave" fill="none" stroke="#3de7c9" stroke-width="2" opacity=".85">
+        <path d="M60 188 C 100 160, 130 210, 170 188 S 240 160, 280 188 S 340 210, 350 188"/>
+      </g>
+    </g>
+
+    <g class="card2">
+      <rect x="400" y="36" width="400" height="208" rx="18" fill="#0b1422" stroke="#23324a"/>
+      <text x="424" y="74" fill="#8fb4ff" font-size="12" letter-spacing="3">MODULE 02</text>
+      <text x="424" y="112" fill="#e8f2ff" font-size="26" font-weight="700">runtime loop</text>
+      <text x="424" y="144" fill="#8ea0b8" font-size="14">input -&gt; process -&gt; output</text>
+      <g fill="none" stroke-width="1.6">
+        <path class="flow" d="M460 190 H700" stroke="#3de7c9"/>
+        <path class="flow2" d="M520 170 H640" stroke="#5b8cff"/>
+        <circle class="n1" cx="460" cy="190" r="5" fill="#3de7c9" stroke="none"/>
+        <circle class="n2" cx="580" cy="190" r="5" fill="#8fb4ff" stroke="none"/>
+        <circle class="n3" cx="700" cy="190" r="5" fill="#3de7c9" stroke="none"/>
+        <circle class="n2" cx="520" cy="170" r="4" fill="#5b8cff" stroke="none"/>
+        <circle class="n1" cx="640" cy="170" r="4" fill="#5b8cff" stroke="none"/>
+      </g>
+    </g>
+
+    <g class="card3">
+      <rect x="824" y="36" width="340" height="208" rx="18" fill="#0b1422" stroke="#23324a"/>
+      <text x="848" y="74" fill="#7de8d2" font-size="12" letter-spacing="3">MODULE 03</text>
+      <text x="848" y="112" fill="#e8f2ff" font-size="26" font-weight="700">play layer</text>
+      <text x="848" y="144" fill="#8ea0b8" font-size="14">systems that feel alive</text>
+      <circle cx="934" cy="190" r="34" fill="none" stroke="#23324a"/>
+      <circle class="spin" cx="934" cy="190" r="34" fill="none" stroke="#3de7c9" stroke-dasharray="40 180" stroke-width="3"/>
+      <circle cx="934" cy="190" r="18" fill="#3de7c9" opacity=".15" filter="url(#blur)"/>
+      <circle cx="934" cy="190" r="5" fill="#3de7c9"/>
+    </g>
+  </g>
+</svg>

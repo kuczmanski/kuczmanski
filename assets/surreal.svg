@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="surreal field">
+  <defs>
+    <radialGradient id="void" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#10182a"/>
+      <stop offset="45%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#020308"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8ffff" stop-opacity=".95"/>
+      <stop offset="18%" stop-color="#7ef0ff" stop-opacity=".55"/>
+      <stop offset="42%" stop-color="#6a7dff" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#6a7dff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbTeal" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#b8fff7" stop-opacity=".7"/>
+      <stop offset="40%" stop-color="#3de7c9" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#3de7c9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbViolet" cx="40%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#f0e6ff" stop-opacity=".55"/>
+      <stop offset="45%" stop-color="#9b7bff" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#9b7bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbBlue" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#dce9ff" stop-opacity=".6"/>
+      <stop offset="40%" stop-color="#5b8cff" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="filament" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7ef0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a78bff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#3de7c9" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="bloom" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="micro" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <style>
+      <![CDATA[
+        .f1 { animation: float1 13s ease-in-out infinite; }
+        .f2 { animation: float2 17s ease-in-out infinite; }
+        .f3 { animation: float3 11s ease-in-out infinite; }
+        .f4 { animation: float4 19s ease-in-out infinite; }
+        .f5 { animation: float5 15s ease-in-out infinite; }
+        .spinSlow { transform-origin: 600px 310px; animation: spin 48s linear infinite; }
+        .spinMid { transform-origin: 600px 310px; animation: spin 28s linear infinite reverse; }
+        .spinFast { transform-origin: 600px 310px; animation: spin 16s linear infinite; }
+        .pulseCore { animation: pulseCore 4.5s ease-in-out infinite; }
+        .driftA { animation: driftA 22s ease-in-out infinite; }
+        .driftB { animation: driftB 26s ease-in-out infinite; }
+        .driftC { animation: driftC 18s ease-in-out infinite; }
+        .twinkle { animation: twinkle 3.4s ease-in-out infinite; }
+        .twinkle2 { animation: twinkle 4.2s ease-in-out .7s infinite; }
+        .twinkle3 { animation: twinkle 2.8s ease-in-out 1.3s infinite; }
+        .shard1 { transform-origin: 220px 160px; animation: tumble 14s ease-in-out infinite; }
+        .shard2 { transform-origin: 980px 420px; animation: tumble 18s ease-in-out infinite reverse; }
+        .shard3 { transform-origin: 860px 140px; animation: tumble 12s ease-in-out .5s infinite; }
+        .shard4 { transform-origin: 180px 460px; animation: tumble 16s ease-in-out 1s infinite reverse; }
+        .pulseLine { stroke-dasharray: 4 14; animation: dash 3.5s linear infinite; }
+        .pulseLine2 { stroke-dasharray: 3 16; animation: dash 5s linear infinite reverse; }
+        .nebula { animation: breathe 10s ease-in-out infinite; }
+        .nebula2 { animation: breathe 13s ease-in-out 2s infinite reverse; }
+        @keyframes float1 {
+          0%,100% { transform: translate(0,0); }
+          50% { transform: translate(28px,-36px); }
+        }
+        @keyframes float2 {
+          0%,100% { transform: translate(0,0); }
+          50% { transform: translate(-34px,22px); }
+        }
+        @keyframes float3 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(18px,28px) scale(1.08); }
+        }
+        @keyframes float4 {
+          0%,100% { transform: translate(0,0); }
+          50% { transform: translate(-22px,-18px); }
+        }
+        @keyframes float5 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(30px,12px) scale(.92); }
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulseCore {
+          0%,100% { transform: scale(1); opacity: .85; }
+          50% { transform: scale(1.12); opacity: 1; }
+        }
+        @keyframes driftA {
+          0%,100% { transform: translate(0,0); }
+          33% { transform: translate(40px,-20px); }
+          66% { transform: translate(-20px,30px); }
+        }
+        @keyframes driftB {
+          0%,100% { transform: translate(0,0); }
+          50% { transform: translate(-50px,25px); }
+        }
+        @keyframes driftC {
+          0%,100% { transform: translate(0,0); }
+          50% { transform: translate(35px,-40px); }
+        }
+        @keyframes twinkle {
+          0%,100% { opacity: .15; }
+          50% { opacity: .95; }
+        }
+        @keyframes tumble {
+          0%,100% { transform: translate(0,0) rotate(0deg); }
+          50% { transform: translate(16px,-24px) rotate(18deg); }
+        }
+        @keyframes dash { to { stroke-dashoffset: -80; } }
+        @keyframes breathe {
+          0%,100% { transform: scale(1); opacity: .55; }
+          50% { transform: scale(1.15); opacity: .85; }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- void -->
+  <rect width="1200" height="640" fill="#010205"/>
+  <rect width="1200" height="640" fill="url(#void)"/>
+
+  <!-- distant nebulae -->
+  <ellipse class="nebula" cx="280" cy="180" rx="220" ry="120" fill="#6a7dff" opacity=".12" filter="url(#bloom)"/>
+  <ellipse class="nebula2" cx="920" cy="460" rx="260" ry="140" fill="#3de7c9" opacity=".1" filter="url(#bloom)"/>
+  <ellipse class="nebula" cx="700" cy="120" rx="160" ry="90" fill="#9b7bff" opacity=".1" filter="url(#bloom)"/>
+
+  <!-- star field -->
+  <g filter="url(#micro)" fill="#eaf6ff">
+    <circle class="twinkle" cx="70" cy="80" r="1.2"/>
+    <circle class="twinkle2" cx="140" cy="40" r="0.9"/>
+    <circle class="twinkle3" cx="210" cy="110" r="1.4"/>
+    <circle class="twinkle" cx="320" cy="60" r="0.8"/>
+    <circle class="twinkle2" cx="410" cy="95" r="1.1"/>
+    <circle class="twinkle3" cx="500" cy="35" r="0.7"/>
+    <circle class="twinkle" cx="590" cy="70" r="1.3"/>
+    <circle class="twinkle2" cx="680" cy="50" r="0.9"/>
+    <circle class="twinkle3" cx="760" cy="100" r="1.2"/>
+    <circle class="twinkle" cx="850" cy="40" r="0.8"/>
+    <circle class="twinkle2" cx="940" cy="85" r="1.5"/>
+    <circle class="twinkle3" cx="1030" cy="55" r="0.9"/>
+    <circle class="twinkle" cx="1120" cy="95" r="1.1"/>
+    <circle class="twinkle2" cx="90" cy="200" r="0.8"/>
+    <circle class="twinkle3" cx="180" cy="260" r="1.2"/>
+    <circle class="twinkle" cx="40" cy="340" r="1"/>
+    <circle class="twinkle2" cx="120" cy="420" r="0.7"/>
+    <circle class="twinkle3" cx="60" cy="520" r="1.3"/>
+    <circle class="twinkle" cx="200" cy="560" r="0.9"/>
+    <circle class="twinkle2" cx="300" cy="500" r="1.1"/>
+    <circle class="twinkle3" cx="400" cy="580" r="0.8"/>
+    <circle class="twinkle" cx="520" cy="540" r="1.4"/>
+    <circle class="twinkle2" cx="640" cy="600" r="0.9"/>
+    <circle class="twinkle3" cx="740" cy="550" r="1.2"/>
+    <circle class="twinkle" cx="860" cy="590" r="0.7"/>
+    <circle class="twinkle2" cx="960" cy="530" r="1.3"/>
+    <circle class="twinkle3" cx="1080" cy="570" r="1"/>
+    <circle class="twinkle" cx="1150" cy="480" r="0.8"/>
+    <circle class="twinkle2" cx="1100" cy="360" r="1.1"/>
+    <circle class="twinkle3" cx="1160" cy="240" r="0.9"/>
+    <circle class="twinkle" cx="1050" cy="190" r="1.2"/>
+    <circle class="twinkle2" cx="980" cy="250" r="0.7"/>
+  </g>
+
+  <!-- neural filaments -->
+  <g fill="none" stroke="url(#filament)" stroke-width="1.2" opacity=".7">
+    <path class="pulseLine" d="M180 420 C 300 280, 420 500, 600 310"/>
+    <path class="pulseLine2" d="M600 310 C 760 140, 880 420, 1040 220"/>
+    <path class="pulseLine" d="M220 180 C 360 240, 480 120, 600 310"/>
+    <path class="pulseLine2" d="M600 310 C 700 460, 820 380, 980 500"/>
+    <path class="pulseLine" d="M140 300 C 280 340, 420 260, 600 310"/>
+    <path class="pulseLine2" d="M600 310 C 740 280, 900 320, 1080 280"/>
+  </g>
+
+  <!-- orbital rings -->
+  <g class="spinSlow" fill="none" stroke="#7ef0ff" stroke-opacity=".18" stroke-width="1">
+    <ellipse cx="600" cy="310" rx="260" ry="90"/>
+    <ellipse cx="600" cy="310" rx="340" ry="130"/>
+  </g>
+  <g class="spinMid" fill="none" stroke="#a78bff" stroke-opacity=".16" stroke-width="1">
+    <ellipse cx="600" cy="310" rx="180" ry="220"/>
+    <ellipse cx="600" cy="310" rx="120" ry="280"/>
+  </g>
+  <g class="spinFast" fill="none" stroke="#3de7c9" stroke-opacity=".22" stroke-width="1.2">
+    <ellipse cx="600" cy="310" rx="210" ry="70"/>
+    <circle cx="810" cy="310" r="3.5" fill="#7ef0ff" stroke="none" opacity=".8"/>
+    <circle cx="390" cy="310" r="2.5" fill="#a78bff" stroke="none" opacity=".7"/>
+  </g>
+
+  <!-- floating orbs -->
+  <g class="f1"><circle cx="250" cy="220" r="70" fill="url(#orbTeal)"/></g>
+  <g class="f2"><circle cx="940" cy="180" r="90" fill="url(#orbViolet)"/></g>
+  <g class="f3"><circle cx="860" cy="460" r="110" fill="url(#orbBlue)"/></g>
+  <g class="f4"><circle cx="180" cy="470" r="80" fill="url(#orbViolet)"/></g>
+  <g class="f5"><circle cx="520" cy="150" r="55" fill="url(#orbTeal)"/></g>
+
+  <!-- crystalline shards -->
+  <g class="shard1" opacity=".55" fill="none" stroke="#9ef6ff" stroke-width="1.2">
+    <path d="M200 140 L240 155 L225 195 Z" fill="#7ef0ff" fill-opacity=".08"/>
+    <path d="M210 130 L255 148 L235 180 Z"/>
+  </g>
+  <g class="shard2" opacity=".5" fill="none" stroke="#c4b5ff" stroke-width="1.2">
+    <path d="M960 400 L1010 420 L985 470 Z" fill="#a78bff" fill-opacity=".08"/>
+    <path d="M970 390 L1025 415 L995 455 Z"/>
+  </g>
+  <g class="shard3" opacity=".45" fill="none" stroke="#7ef0ff" stroke-width="1">
+    <path d="M840 110 L890 125 L870 165 Z" fill="#5b8cff" fill-opacity=".1"/>
+  </g>
+  <g class="shard4" opacity=".5" fill="none" stroke="#b8fff7" stroke-width="1">
+    <path d="M150 440 L195 455 L170 500 Z" fill="#3de7c9" fill-opacity=".1"/>
+  </g>
+
+  <!-- drifting node clusters -->
+  <g class="driftA">
+    <circle cx="330" cy="340" r="4" fill="#7ef0ff" opacity=".8"/>
+    <circle cx="360" cy="320" r="2.5" fill="#a78bff" opacity=".7"/>
+    <circle cx="345" cy="365" r="3" fill="#3de7c9" opacity=".75"/>
+    <path d="M330 340 L360 320 L345 365 Z" fill="none" stroke="#8adfff" stroke-opacity=".25"/>
+  </g>
+  <g class="driftB">
+    <circle cx="780" cy="250" r="3.5" fill="#c4b5ff" opacity=".85"/>
+    <circle cx="810" cy="270" r="2.2" fill="#7ef0ff" opacity=".7"/>
+    <circle cx="760" cy="275" r="2.8" fill="#5b8cff" opacity=".75"/>
+    <path d="M780 250 L810 270 L760 275 Z" fill="none" stroke="#b7a4ff" stroke-opacity=".25"/>
+  </g>
+  <g class="driftC">
+    <circle cx="690" cy="430" r="3" fill="#3de7c9" opacity=".8"/>
+    <circle cx="720" cy="450" r="2.4" fill="#7ef0ff" opacity=".7"/>
+    <circle cx="670" cy="455" r="2" fill="#a78bff" opacity=".7"/>
+  </g>
+
+  <!-- central singularity -->
+  <g transform="translate(600 310)">
+    <circle r="120" fill="url(#core)" class="pulseCore" filter="url(#soft)"/>
+    <circle r="18" fill="#f4ffff" opacity=".9"/>
+    <circle r="34" fill="none" stroke="#7ef0ff" stroke-opacity=".35" stroke-width="1.5">
+      <animate attributeName="r" values="28;40;28" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".5;.15;.5" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="52" fill="none" stroke="#a78bff" stroke-opacity=".2" stroke-width="1">
+      <animate attributeName="r" values="46;62;46" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".35;.1;.35" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- near-field floating dust -->
+  <g fill="#d7f9ff">
+    <circle class="f1" cx="430" cy="260" r="1.6" opacity=".7"/>
+    <circle class="f2" cx="740" cy="340" r="1.3" opacity=".6"/>
+    <circle class="f3" cx="560" cy="400" r="1.8" opacity=".65"/>
+    <circle class="f4" cx="640" cy="220" r="1.2" opacity=".55"/>
+    <circle class="f5" cx="480" cy="350" r="1.4" opacity=".7"/>
+    <circle class="f1" cx="820" cy="300" r="1.1" opacity=".5"/>
+    <circle class="f2" cx="390" cy="290" r="1.5" opacity=".6"/>
+  </g>
+</svg>

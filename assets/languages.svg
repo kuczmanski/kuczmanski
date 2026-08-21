@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="280" viewBox="0 0 850 280">
+  <defs>
+    <style>
+      .title { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58a6ff; }
+      .name { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e6edf3; }
+      .pct { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7d8590; }
+      .track { fill: #21262d; }
+    </style>
+  </defs>
+  <rect width="850" height="280" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <text x="28" y="36" class="title">linguagens por volume de código</text>
+  <text x="28" y="78" class="name">HTML</text>
+  <text x="790" y="78" text-anchor="end" class="pct">40%</text>
+  <rect x="28" y="88" width="794" height="10" rx="5" class="track"/>
+  <rect x="28" y="88" width="318" height="10" rx="5" fill="#e34c26"/>
+  <text x="28" y="126" class="name">Java</text>
+  <text x="790" y="126" text-anchor="end" class="pct">24%</text>
+  <rect x="28" y="136" width="794" height="10" rx="5" class="track"/>
+  <rect x="28" y="136" width="191" height="10" rx="5" fill="#b07219"/>
+  <text x="28" y="174" class="name">JavaScript</text>
+  <text x="790" y="174" text-anchor="end" class="pct">16%</text>
+  <rect x="28" y="184" width="794" height="10" rx="5" class="track"/>
+  <rect x="28" y="184" width="127" height="10" rx="5" fill="#f1e05a"/>
+  <text x="28" y="222" class="name">CSS</text>
+  <text x="790" y="222" text-anchor="end" class="pct">12%</text>
+  <rect x="28" y="232" width="794" height="10" rx="5" class="track"/>
+  <rect x="28" y="232" width="95" height="10" rx="5" fill="#563d7c"/>
+  <text x="28" y="260" class="pct">também: Python · Dart · TypeScript · C++ · Shell · Docker</text>
+</svg>

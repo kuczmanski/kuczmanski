@@ -1,0 +1,141 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">kuczmanski</title>
+  <desc id="desc">Animated profile banner</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07090f"/>
+      <stop offset="55%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#081018"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="22%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#3de7c9" stop-opacity=".35"/>
+      <stop offset="55%" stop-color="#3de7c9" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#3de7c9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="78%" cy="68%" r="42%">
+      <stop offset="0%" stop-color="#5b8cff" stop-opacity=".28"/>
+      <stop offset="60%" stop-color="#5b8cff" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3de7c9" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#3de7c9" stop-opacity=".7"/>
+      <stop offset="65%" stop-color="#5b8cff" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8fff9"/>
+      <stop offset="45%" stop-color="#9af6e2"/>
+      <stop offset="100%" stop-color="#8fb4ff"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect x="24" y="24" width="1152" height="372" rx="28"/>
+    </clipPath>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#9ec9ff" stroke-opacity=".06" stroke-width="1"/>
+    </pattern>
+    <style>
+      <![CDATA[
+        .orbA { animation: driftA 11s ease-in-out infinite; }
+        .orbB { animation: driftB 14s ease-in-out infinite; }
+        .scan { animation: scan 5.5s linear infinite; }
+        .ring { transform-origin: 960px 210px; animation: spin 22s linear infinite; }
+        .ring2 { transform-origin: 960px 210px; animation: spin 34s linear infinite reverse; }
+        .pulse { animation: pulse 2.8s ease-in-out infinite; }
+        .fadeIn { animation: fadeIn 1.2s ease both; }
+        .fadeIn2 { animation: fadeIn 1.2s ease .25s both; }
+        .fadeIn3 { animation: fadeIn 1.2s ease .5s both; }
+        .cursor { animation: blink 1.1s steps(1) infinite; }
+        .bar, .bar2, .bar3, .bar4, .bar5 { transform-box: fill-box; transform-origin: center bottom; }
+        .bar { animation: bars 1.6s ease-in-out infinite; }
+        .bar2 { animation: bars 1.6s ease-in-out .2s infinite; }
+        .bar3 { animation: bars 1.6s ease-in-out .4s infinite; }
+        .bar4 { animation: bars 1.6s ease-in-out .1s infinite; }
+        .bar5 { animation: bars 1.6s ease-in-out .35s infinite; }
+        @keyframes driftA {
+          0%, 100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(40px, 18px) scale(1.08); }
+        }
+        @keyframes driftB {
+          0%, 100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(-36px, -22px) scale(1.1); }
+        }
+        @keyframes scan {
+          0% { transform: translateY(-180px); opacity: 0; }
+          15% { opacity: .35; }
+          85% { opacity: .35; }
+          100% { transform: translateY(360px); opacity: 0; }
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulse {
+          0%, 100% { opacity: .45; }
+          50% { opacity: 1; }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes blink {
+          0%, 45% { opacity: 1; }
+          50%, 100% { opacity: 0; }
+        }
+        @keyframes bars {
+          0%, 100% { transform: scaleY(.45); }
+          50% { transform: scaleY(1); }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="#05070c"/>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="420" fill="url(#bg)"/>
+    <rect width="1200" height="420" fill="url(#grid)"/>
+    <circle class="orbA" cx="260" cy="140" r="180" fill="url(#glowA)" filter="url(#soft)"/>
+    <circle class="orbB" cx="920" cy="280" r="190" fill="url(#glowB)" filter="url(#soft)"/>
+    <rect class="scan" x="24" y="24" width="1152" height="70" fill="#9af6e2" opacity=".08"/>
+
+    <!-- precision marks -->
+    <g stroke="#9ec9ff" stroke-opacity=".18" fill="none">
+      <path d="M56 56h36M56 56v36"/>
+      <path d="M1144 56h-36M1144 56v36"/>
+      <path d="M56 364h36M56 364v-36"/>
+      <path d="M1144 364h-36M1144 364v-36"/>
+    </g>
+
+    <!-- left signal meters -->
+    <g class="fadeIn3" fill="#3de7c9">
+      <g transform="translate(88,298)"><rect class="bar" x="-4" y="-48" width="8" height="48" rx="3"/></g>
+      <g transform="translate(104,298)"><rect class="bar2" x="-4" y="-48" width="8" height="48" rx="3"/></g>
+      <g transform="translate(120,298)"><rect class="bar3" x="-4" y="-48" width="8" height="48" rx="3"/></g>
+      <g transform="translate(136,298)"><rect class="bar4" x="-4" y="-48" width="8" height="48" rx="3"/></g>
+      <g transform="translate(152,298)"><rect class="bar5" x="-4" y="-48" width="8" height="48" rx="3"/></g>
+    </g>
+
+    <!-- orbit system -->
+    <g class="fadeIn2" opacity=".9">
+      <circle cx="960" cy="210" r="8" fill="#3de7c9" class="pulse"/>
+      <g class="ring" fill="none" stroke="#3de7c9" stroke-opacity=".35">
+        <ellipse cx="960" cy="210" rx="118" ry="48"/>
+        <circle cx="1078" cy="210" r="4" fill="#3de7c9" stroke="none"/>
+      </g>
+      <g class="ring2" fill="none" stroke="#5b8cff" stroke-opacity=".3">
+        <ellipse cx="960" cy="210" rx="78" ry="118"/>
+        <circle cx="960" cy="92" r="3.5" fill="#8fb4ff" stroke="none"/>
+      </g>
+    </g>
+
+    <!-- copy -->
+    <g class="fadeIn" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      <text x="84" y="118" fill="#7de8d2" font-size="14" letter-spacing="4">CRAFT / SYSTEMS / PLAY</text>
+      <text x="84" y="198" fill="url(#textGrad)" font-size="64" font-weight="700" letter-spacing="1">kuczmanski</text>
+      <text x="84" y="248" fill="#9fb2c9" font-size="20">interactive systems, built with precision</text>
+      <rect class="cursor" x="84" y="268" width="10" height="22" rx="2" fill="#3de7c9"/>
+    </g>
+  </g>
+
+  <rect x="24.5" y="24.5" width="1151" height="371" rx="28" fill="none" stroke="url(#stroke)" stroke-width="1.5"/>
+</svg>

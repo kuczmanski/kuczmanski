@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-label="Footer">
+  <defs>
+    <linearGradient id="fg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3de7c9" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3de7c9" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      <![CDATA[
+        .ping { animation: ping 2.2s ease-out infinite; }
+        @keyframes ping {
+          0% { r: 3; opacity: .9; }
+          100% { r: 16; opacity: 0; }
+        }
+      ]]>
+    </style>
+  </defs>
+  <rect width="1200" height="120" fill="transparent"/>
+  <line x1="80" y1="36" x2="1120" y2="36" stroke="url(#fg)"/>
+  <g transform="translate(600,72)">
+    <circle class="ping" r="3" fill="#3de7c9"/>
+    <circle r="4" fill="#3de7c9"/>
+  </g>
+  <text x="600" y="100" text-anchor="middle" fill="#7f93ad" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="3">built to feel alive</text>
+</svg>

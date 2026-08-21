@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="flux field">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#03060c"/>
+      <stop offset="50%" stop-color="#070b16"/>
+      <stop offset="100%" stop-color="#040710"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3de7c9" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#7ef0ff" stop-opacity=".7"/>
+      <stop offset="55%" stop-color="#a78bff" stop-opacity=".8"/>
+      <stop offset="80%" stop-color="#5b8cff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ribbon2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#9b7bff" stop-opacity=".5"/>
+      <stop offset="70%" stop-color="#3de7c9" stop-opacity=".65"/>
+      <stop offset="100%" stop-color="#3de7c9" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eaffff" stop-opacity=".85"/>
+      <stop offset="35%" stop-color="#7ef0ff" stop-opacity=".3"/>
+      <stop offset="100%" stop-color="#7ef0ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+    <style>
+      <![CDATA[
+        .r1 { animation: sway1 8s ease-in-out infinite; }
+        .r2 { animation: sway2 11s ease-in-out infinite; }
+        .r3 { animation: sway3 9s ease-in-out infinite; }
+        .fly1 { animation: fly1 12s ease-in-out infinite; }
+        .fly2 { animation: fly2 15s ease-in-out infinite; }
+        .fly3 { animation: fly3 10s ease-in-out infinite; }
+        .fly4 { animation: fly4 14s ease-in-out infinite; }
+        .fly5 { animation: fly5 13s ease-in-out infinite; }
+        .spin { transform-origin: center; animation: spin 20s linear infinite; }
+        .pulse { animation: pulse 3s ease-in-out infinite; }
+        @keyframes sway1 {
+          0%,100% { transform: translateY(0); }
+          50% { transform: translateY(-18px); }
+        }
+        @keyframes sway2 {
+          0%,100% { transform: translateY(0); }
+          50% { transform: translateY(22px); }
+        }
+        @keyframes sway3 {
+          0%,100% { transform: translateY(0); }
+          50% { transform: translateY(-12px); }
+        }
+        @keyframes fly1 {
+          0%,100% { transform: translate(0,0) rotate(0deg); }
+          50% { transform: translate(60px,-30px) rotate(25deg); }
+        }
+        @keyframes fly2 {
+          0%,100% { transform: translate(0,0) rotate(0deg); }
+          50% { transform: translate(-50px,25px) rotate(-20deg); }
+        }
+        @keyframes fly3 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50% { transform: translate(40px,18px) scale(1.15); }
+        }
+        @keyframes fly4 {
+          0%,100% { transform: translate(0,0) rotate(10deg); }
+          50% { transform: translate(-35px,-28px) rotate(-15deg); }
+        }
+        @keyframes fly5 {
+          0%,100% { transform: translate(0,0); }
+          50% { transform: translate(55px,10px); }
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulse {
+          0%,100% { opacity: .4; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.2); }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <ellipse cx="600" cy="160" rx="420" ry="80" fill="#6a7dff" opacity=".08" filter="url(#blur)"/>
+
+  <!-- energy ribbons -->
+  <g fill="none" stroke-linecap="round">
+    <path class="r1" d="M40 160 C 200 60, 360 260, 520 150 S 820 40, 1160 170" stroke="url(#ribbon)" stroke-width="2.2"/>
+    <path class="r2" d="M40 190 C 220 280, 400 80, 600 180 S 900 280, 1160 140" stroke="url(#ribbon2)" stroke-width="1.6"/>
+    <path class="r3" d="M60 130 C 260 200, 440 100, 640 140 S 940 220, 1140 120" stroke="url(#ribbon)" stroke-width="1.2" opacity=".7"/>
+  </g>
+
+  <!-- flying fragments -->
+  <g class="fly1" opacity=".75">
+    <path d="M180 90 L220 100 L205 135 Z" fill="#7ef0ff" fill-opacity=".12" stroke="#9ef6ff" stroke-width="1"/>
+  </g>
+  <g class="fly2" opacity=".7">
+    <rect x="880" y="70" width="28" height="28" rx="4" transform="rotate(25 894 84)" fill="#a78bff" fill-opacity=".12" stroke="#c4b5ff" stroke-width="1"/>
+  </g>
+  <g class="fly3" opacity=".8">
+    <circle cx="420" cy="80" r="10" fill="url(#glow)"/>
+  </g>
+  <g class="fly4" opacity=".7">
+    <path d="M980 220 L1020 235 L1000 270 Z" fill="#5b8cff" fill-opacity=".12" stroke="#8fb4ff" stroke-width="1"/>
+  </g>
+  <g class="fly5" opacity=".75">
+    <circle cx="300" cy="230" r="7" fill="#3de7c9" fill-opacity=".25" stroke="#7ef0ff" stroke-width="1"/>
+    <circle cx="300" cy="230" r="2.5" fill="#eaffff"/>
+  </g>
+
+  <!-- orbiting micro nodes -->
+  <g transform="translate(600 160)">
+    <g class="spin">
+      <ellipse cx="0" cy="0" rx="160" ry="42" fill="none" stroke="#7ef0ff" stroke-opacity=".2"/>
+      <circle cx="160" cy="0" r="3" fill="#7ef0ff"/>
+      <circle cx="-160" cy="0" r="2.2" fill="#a78bff"/>
+      <ellipse cx="0" cy="0" rx="100" ry="70" fill="none" stroke="#a78bff" stroke-opacity=".15"/>
+      <circle cx="0" cy="-70" r="2.5" fill="#3de7c9"/>
+    </g>
+    <circle class="pulse" r="16" fill="url(#glow)" filter="url(#soft)"/>
+    <circle r="4" fill="#f4ffff"/>
+  </g>
+
+  <!-- scattered sparks -->
+  <g fill="#eafcff">
+    <circle class="fly1" cx="120" cy="160" r="1.2" opacity=".6"/>
+    <circle class="fly3" cx="540" cy="100" r="1.4" opacity=".7"/>
+    <circle class="fly2" cx="760" cy="200" r="1.1" opacity=".55"/>
+    <circle class="fly5" cx="1040" cy="150" r="1.3" opacity=".65"/>
+    <circle class="fly4" cx="650" cy="240" r="1" opacity=".5"/>
+  </g>
+</svg>

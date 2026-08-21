@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="526" viewBox="0 0 850 526">
+  <defs>
+    <style>
+      .title { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58a6ff; }
+      .cardTitle { font: 700 15px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e6edf3; }
+      .ramo { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }
+      .tag { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #3fb950; }
+      .card { fill: #161b22; stroke: #30363d; }
+    </style>
+  </defs>
+  <rect width="850" height="526" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <text x="28" y="36" class="title">projetos 01-10 · ramo e stack</text>
+  
+  <g transform="translate(28,56)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 01</text>
+    <text x="16" y="52" class="ramo">SaaS · Backend</text>
+    <text x="16" y="76" class="tag">Java · Spring · HTML · CSS · JS</text>
+  </g>
+  <g transform="translate(294,56)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 02</text>
+    <text x="16" y="52" class="ramo">SaaS · Web</text>
+    <text x="16" y="76" class="tag">Java · HTML · CSS · JS</text>
+  </g>
+  <g transform="translate(560,56)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 03</text>
+    <text x="16" y="52" class="ramo">SaaS · Web</text>
+    <text x="16" y="76" class="tag">Java · HTML · CSS · JS</text>
+  </g>
+  <g transform="translate(28,170)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 04</text>
+    <text x="16" y="52" class="ramo">Web · Conteúdo</text>
+    <text x="16" y="76" class="tag">HTML · JS · CSS · Shell</text>
+  </g>
+  <g transform="translate(294,170)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 05</text>
+    <text x="16" y="52" class="ramo">Web · Landing</text>
+    <text x="16" y="76" class="tag">HTML</text>
+  </g>
+  <g transform="translate(560,170)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 06</text>
+    <text x="16" y="52" class="ramo">Social · Frontend</text>
+    <text x="16" y="76" class="tag">CSS · HTML · JS</text>
+  </g>
+  <g transform="translate(28,284)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 07</text>
+    <text x="16" y="52" class="ramo">Desktop · Auth</text>
+    <text x="16" y="76" class="tag">HTML · TeX · Python</text>
+  </g>
+  <g transform="translate(294,284)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 08</text>
+    <text x="16" y="52" class="ramo">Sistemas · Backend</text>
+    <text x="16" y="76" class="tag">Java · CSS · Docker</text>
+  </g>
+  <g transform="translate(560,284)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 09</text>
+    <text x="16" y="52" class="ramo">Mobile</text>
+    <text x="16" y="76" class="tag">Dart · Flutter</text>
+  </g>
+  <g transform="translate(28,398)">
+    <rect width="250" height="100" rx="10" class="card"/>
+    <text x="16" y="28" class="cardTitle">Projeto 10</text>
+    <text x="16" y="52" class="ramo">Infra · Redes</text>
+    <text x="16" y="76" class="tag">Python · HTML</text>
+  </g>
+</svg>

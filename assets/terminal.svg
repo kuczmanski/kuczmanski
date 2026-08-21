@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-label="Terminal">
+  <defs>
+    <linearGradient id="termBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c121c"/>
+      <stop offset="100%" stop-color="#080d14"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3de7c9" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3de7c9" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#5b8cff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="c1"><rect class="t1" x="78" y="74" width="0" height="28"/></clipPath>
+    <clipPath id="c2"><rect class="t2" x="78" y="110" width="0" height="28"/></clipPath>
+    <clipPath id="c3"><rect class="t3" x="78" y="146" width="0" height="28"/></clipPath>
+    <style>
+      <![CDATA[
+        .t1 { animation: grow1 9s ease-in-out infinite; }
+        .t2 { animation: grow2 9s ease-in-out infinite; }
+        .t3 { animation: grow3 9s ease-in-out infinite; }
+        .blink { animation: blink 1s steps(1) infinite; }
+        @keyframes grow1 {
+          0%, 6% { width: 0; }
+          26%, 86% { width: 360px; }
+          94%, 100% { width: 0; }
+        }
+        @keyframes grow2 {
+          0%, 28% { width: 0; }
+          50%, 86% { width: 470px; }
+          94%, 100% { width: 0; }
+        }
+        @keyframes grow3 {
+          0%, 52% { width: 0; }
+          72%, 86% { width: 390px; }
+          94%, 100% { width: 0; }
+        }
+        @keyframes blink {
+          0%, 49% { opacity: 1; }
+          50%, 100% { opacity: 0; }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <rect x="24" y="16" width="1152" height="188" rx="18" fill="url(#termBg)" stroke="#1c2a3f"/>
+  <rect x="24" y="16" width="1152" height="188" rx="18" fill="none" stroke="url(#edge)"/>
+
+  <circle cx="56" cy="44" r="6" fill="#ff5f56"/>
+  <circle cx="78" cy="44" r="6" fill="#ffbd2e"/>
+  <circle cx="100" cy="44" r="6" fill="#27c93f"/>
+  <text x="600" y="48" text-anchor="middle" fill="#6f8199" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="2">session://profile</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">
+    <text x="56" y="92" fill="#3de7c9">$</text>
+    <text x="78" y="92" fill="#d7e6f7" clip-path="url(#c1)">boot interactive profile</text>
+
+    <text x="56" y="128" fill="#3de7c9">$</text>
+    <text x="78" y="128" fill="#d7e6f7" clip-path="url(#c2)">load systems --mode=play --precision</text>
+
+    <text x="56" y="164" fill="#3de7c9">$</text>
+    <text x="78" y="164" fill="#9af6e2" clip-path="url(#c3)">ready. impress without noise.</text>
+
+    <rect class="blink" x="470" y="150" width="9" height="18" rx="2" fill="#3de7c9"/>
+  </g>
+</svg>
