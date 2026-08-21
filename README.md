@@ -1,74 +1,89 @@
 # Olá, eu sou o Mateus 👋
 
-**Desenvolvedor Full Stack · produtos de ponta a ponta**
+**Desenvolvedor Java.**
 
-Construo sistemas completos: arquitetura, backend, frontend, mobile, banco, integrações e deploy. A maior parte do trabalho fica em repositórios privados (produtos e clientes). Abaixo está o que de fato já saiu do zero — stack, decisões e o problema que cada um resolve.
+Spring Boot é o que eu sei de verdade: domínio, segurança, persistência, billing, multi-tenant, deploy. HTML, JS, Node, Flutter e Python aparecem nos produtos porque alguém precisa da tela, do app ou da integração — não porque eu me posicione como full stack.
 
 📍 Brasil
 
 ---
 
-## Stack principal
+## Java
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-**Também no dia a dia:** Spring Security · JPA/Hibernate · Thymeleaf · JWT · OAuth (Google) · Flyway · Express · Vite · Tailwind · shadcn/ui · WhatsApp Cloud API / Baileys / whatsapp-web.js · Ollama · WireGuard · JavaFX · GitHub Actions
+JPA/Hibernate · Hibernate Envers · Thymeleaf · JWT · OAuth2 · Flyway · Actuator · Mail · testes com H2
 
----
-
-## O que estou construindo
-
-**CrewOS** — sistema operacional de atendimento com colaboradores digitais (IA). Não é um chatbot genérico: cada empresa (tenant) configura **agentes por vertical e objetivo** (vender, agendar, qualificar, suporte), com base de conhecimento própria e memória por contato. WhatsApp é o primeiro canal.
-
-- Java 17 · Spring Boot 3.2 · Spring Security · JPA · Thymeleaf no painel · MySQL 8 · H2 nos testes
-- Multi-tenant: empresa, papéis `EMPRESA`/`ADMIN`, inbox, CRM leve, agenda e takeover humano
-- WhatsApp Cloud API (Meta) com webhook assinado + Embedded Signup; sidecar Node (`whatsapp-web.js`) como legado, isolado por tenant
-- Orquestrador local com Ollama (`qwen2.5:7b`): prompt por vertical/objetivo, FAQ sem LLM quando casa, ferramentas internas (`<<<ACOES>>>`) que atualizam CRM/agenda
-- Conhecimento em texto, FAQ, URL e PDF (Apache PDFBox) · landing em React/Vite · Docker no deploy
+**No produto, quando precisa:** HTML/CSS/JS · Node (sidecar WhatsApp) · Flutter · Python
 
 ---
 
-## O que já construí
+## Agora: CrewOS
 
-Sistemas que saíram do zero, com stack real — não tutoriais.
+Sistema operacional de atendimento com **colaboradores digitais (IA)**. Cada empresa (tenant) configura agentes por vertical e objetivo (vender, agendar, qualificar, suporte), com conhecimento próprio e memória por contato. WhatsApp é o primeiro canal.
+
+- Java 17 · Spring Boot 3.2 · Security · JPA · Thymeleaf · MySQL 8
+- Multi-tenant, inbox, CRM leve, agenda, takeover humano, papéis `EMPRESA` / `ADMIN`
+- WhatsApp Cloud API (webhook assinado, Embedded Signup) e sidecar Node legado isolado por tenant
+- Orquestrador Ollama (`qwen2.5:7b`): prompt por vertical/objetivo, FAQ sem LLM quando casa, ferramentas que gravam no CRM
+- Base em texto / FAQ / URL / PDF (PDFBox) · Docker
+
+---
+
+## Sistemas em Java
 
 ### Velaris — ERP SaaS para personal trainer
-Gestão de alunos, agenda, financeiro e assinatura (planos Essencial / Pro / Elite).
+Alunos, agenda, financeiro, documentos, planos Essencial / Pro / Elite.
 
-- Java 17 · Spring Boot · MySQL 8 · Maven
-- Billing com Asaas (API + webhooks) · OAuth Google · e-mail SMTP
-- Perfis `dev`/`prod` com secrets por env · testes com H2 em memória
+- Java 17 · Spring Boot 3.2 · Security (senha + OAuth Google) · JPA · Thymeleaf · MySQL
+- Billing Asaas (API + webhooks) · SMTP · área admin · testes H2
 
-### Trego — app de frete (cliente, motorista e admin)
-API REST + app mobile para conectar quem precisa de frete a quem conduz.
+### PlateOS — Velaris + IA
+Mesmo núcleo do Velaris, com login do aluno, WhatsApp, análise de prato por foto (Ollama) e white-label. Painel dividido em Gestão e Automações IA.
 
-- Backend: Spring Boot 3.3 · Java 21 · MySQL · JWT · Docker · Actuator
-- App: Flutter (Dart) · módulos cliente / motorista / admin
+### Trego — frete (cliente, motorista, admin)
+API REST em **Java 21 · Spring Boot 3.3 · MySQL · JWT · Docker · Actuator**. App em Flutter (Dart, Dio, JWT em storage seguro) — o backend é Java.
 
-### RemoteX — acesso remoto (estilo AnyDesk)
-Quatro módulos Java 17: `common`, relay WebSocket com TLS, host que captura tela/executa comandos, cliente JavaFX com multi-monitor, mouse e teclado.
+### RemoteX — acesso remoto
+Quatro módulos Java 17: `common`, relay WebSocket com TLS, host (tela + comandos) e cliente JavaFX (multi-monitor, mouse e teclado).
 
-### VPN WireGuard
-Painel web + gerenciador de servidor + cliente Windows standalone.
+### Software house
+Gestão da operação: clientes, tarefas, usuários, WhatsApp, geração e importação (Apache POI), auditoria.
 
-- Python · WireGuard · SQLite · geração de chaves/configs · executável com config embutida · testes com pytest
+- Java 17 · Spring Boot 3.3 · Security · JPA · Hibernate Envers · Thymeleaf · JWT · Actuator/Prometheus · MySQL · e-mail
 
-### Outros produtos
-- **Biblioteca Oculta / Frutas Virais** — servidor Node único (Express, MySQL, JWT, bcrypt, Baileys, uploads, PM2/VPS)
-- **Gestão web fullstack** — Spring Boot (Security, JPA, JWT, Flyway, MySQL) + front Vite/Tailwind/shadcn
-- **Treinador de poker (local)** — OCR da mesa (CV → Paddle/Tesseract) + motor de decisão Monte Carlo (~20k trials), pot odds e ranges por posição
-- **Simulação cognitiva** — visualização em Pygame + LLM local (Ollama) para experimentação de agentes
+### Academia (multi-tenant)
+Gestão de academia: Spring Boot 3, Security, JPA, JWT, Flyway, MySQL, multi-tenancy. Front em React (MUI).
 
-> O código desses produtos fica em repositórios privados. Em conversa e entrevista eu mostro arquitetura, demo e decisões — é só chamar.
+---
+
+## O resto dos projetos
+
+Não são a stack. Estão aqui porque saíram do zero e o perfil anterior escondia isso.
+
+| Projeto | O que é | Em volta do Java |
+|---------|---------|------------------|
+| **Biblioteca Oculta** | Área de membros, admin, produtos, checkout, webhooks, LPs dinâmicas, tracking | Express · MySQL · JWT · Baileys · PM2/VPS |
+| **Frutas Virais** | Landing/curso; o servidor é o da Biblioteca | HTML |
+| **Automação WhatsApp + pagamento** | Webhook de venda → entrega e fluxos no Zap, dashboard admin | Node · Express · SQLite · whatsapp-web.js · JWT |
+| **WhatsApp bot** | Sessão LocalAuth, QR, inbox de contatos | Node · Express · SQLite |
+| **VPN WireGuard** | Painel, gerenciador de servidor e cliente Windows standalone | Python · SQLite · WireGuard |
+| **Hotkey Login** | App desktop: atalho global, tray, login automático no browser | Python · Tkinter · Selenium · instalador Inno Setup |
+| **Treinador de poker (local)** | Lê a mesa (CV → OCR) e decide com Monte Carlo, pot odds e range | Node |
+| **Cérebro** | Simulação cognitiva em tempo real + LLM local | Python · Pygame · Ollama |
+| **App WebView** | Shell Flutter que abre o produto web | Flutter |
+| **Modelagem financeira** | Modelagem de negócios no browser (charts) | HTML · Chart.js |
+| **DK Softworks** | Site da software house | HTML |
+| **Portfólio (Ricardo Alves)** | Site institucional de palestrante/mentor | HTML |
+| **Apple Crypto** | Landing de compra de cripto | HTML/CSS/JS |
+| **Consciência Expandida** | Landing de curso / protocolo | HTML/CSS/JS |
+
+> Código em repositórios privados. Em conversa e entrevista eu mostro arquitetura e demo.
 
 ---
 
